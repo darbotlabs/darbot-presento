@@ -152,7 +152,21 @@ docker run -it --name darbot-presento --gpus=all -p 5000:80 -e LLM="ollama" -e O
 
 > **Note:** GPU acceleration significantly improves the performance of Ollama models, especially for larger models. Make sure you have sufficient GPU memory for your chosen model.
 
-## Generate Presentation over API
+## MCP (Model Context Protocol) Servers
+
+Darbot Presento includes two MCP server implementations for integration with AI assistants like Claude Desktop:
+
+### Python MCP Server
+- **Location**: `servers/fastapi/mcp_server.py`
+- **Features**: Full API integration via OpenAPI specification
+- **Usage**: Automatically started with the main application on port 8001
+
+### Node.js MCP Server  
+- **Location**: `mcp-server.js`
+- **Features**: Lightweight standalone server for Claude Desktop integration
+- **Setup**: See [MCP_README.md](MCP_README.md) for configuration instructions
+
+Both servers provide the same core functionality for creating and managing presentations through natural language.
 
 ### Generate Presentation
 

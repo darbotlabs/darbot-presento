@@ -1,0 +1,39 @@
+{
+  "name": "darbot-presento-mcp",
+  "version": "1.0.0",
+  "description": "Darbot Presento MCP Server - Node.js implementation for creating AI presentations",
+  "main": "mcp-server.js",
+  "type": "module",
+  "bin": {
+    "darbot-presento-mcp": "./mcp-server.js"
+  },
+  "scripts": {
+    "start": "node mcp-server.js",
+    "dev": "node --watch mcp-server.js"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "ai",
+    "presentations",
+    "darbot-presento",
+    "claude"
+  ],
+  "author": "Darbot Labs",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0",
+    "node-fetch": "^3.3.2"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/darbotlabs/darbot-presento.git"
+  },
+  "homepage": "https://github.com/darbotlabs/darbot-presento#readme",
+  "bugs": {
+    "url": "https://github.com/darbotlabs/darbot-presento/issues"
+  }
+}
