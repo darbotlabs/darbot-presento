@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="readme_assets/images/presenton-logo.png" height="90" alt="Presenton Logo" />
+  <img src="readme_assets/images/presenton-logo.png" height="90" alt="Darbot Presento Logo" />
 </p>
 
 <p align="center">
@@ -15,7 +15,7 @@
 # Open-Source AI Presentation Generator and API (Gamma, Beautiful AI, Decktopus Alternative)
 
 
-**Presenton** is an open-source application for generating presentations with AI — all running locally on your device. Stay in control of your data and privacy while using models like OpenAI and Gemini, or use your own hosted models through Ollama.
+**Darbot Presento** is an open-source application for generating presentations with AI — all running locally on your device. Stay in control of your data and privacy while using models like OpenAI and Gemini, or use your own hosted models through Ollama.
 
 __✨ Now, generate presentations with your existing PPTX file! Just upload your presentation file to create template design and then use that template to generate on brand and on design presentation on any topic.__
 
@@ -27,7 +27,7 @@ __✨ Now, generate presentations with your existing PPTX file! Just upload your
 > For enterprise use, custom deployments, or partnership opportunities, contact us at **[suraj@presenton.ai](mailto:suraj@presenton.ai)**.
 
 > [!IMPORTANT]
-> Like Presenton? A ⭐ star shows your support and encourages us to keep building!
+> Like Darbot Presento? A ⭐ star shows your support and encourages us to keep building!
 
 > [!TIP]
 > For detailed setup guides, API documentation, and advanced configuration options, visit our **[Official Documentation](https://docs.presenton.ai)**
@@ -35,7 +35,7 @@ __✨ Now, generate presentations with your existing PPTX file! Just upload your
 
 ## ✨ More Freedom with AI Presentations
 
-Presenton gives you complete control over your AI presentation workflow. Choose your models, customize your experience, and keep your data private.
+Darbot Presento gives you complete control over your AI presentation workflow. Choose your models, customize your experience, and keep your data private.
 
 * ✅ **Custom Templates & Themes** — Create unlimited presentation designs with HTML and Tailwind CSS
 * ✅ **AI Template Generation** — Create presentation templates from existing Powerpoint documents.
@@ -53,31 +53,31 @@ Presenton gives you complete control over your AI presentation workflow. Choose 
 * ✅ **Fully Open-Source** — Apache 2.0 licensed, inspect, modify, and contribute
 * ✅ **Docker Ready** — One-command deployment with GPU support for local models
 
-## Presenton Cloud
-We're launching Presenton Cloud which will make it very easy to create presentations through UI, API and MCP. Join our [waitlist](https://presenton.ai) for early beta. 
+## Darbot Presento Cloud
+We're launching Darbot Presento Cloud which will make it very easy to create presentations through UI, API and MCP. Join our [waitlist](https://presenton.ai) for early beta. 
 
 ## Deploy on Cloud (one click deployment)
 [![Deploy on Railway](https://railway.com/button.svg)](https://railway.com/deploy/presenton-ai-presentations?referralCode=ubp0kk)
 
 
-## Running Presenton Docker
+## Running Darbot Presento Docker
 
-#### 1. Start Presenton
+#### 1. Start Darbot Presento
 
 ##### Linux/MacOS (Bash/Zsh Shell):
 ```bash
-docker run -it --name presenton -p 5000:80 -v "./app_data:/app_data" ghcr.io/presenton/presenton:latest
+docker run -it --name darbot-presento -p 5000:80 -v "./app_data:/app_data" ghcr.io/presenton/presenton:latest
 ```
 
 ##### Windows (PowerShell):
 ```bash
-docker run -it --name presenton -p 5000:80 -v "${PWD}\app_data:/app_data" ghcr.io/presenton/presenton:latest
+docker run -it --name darbot-presento -p 5000:80 -v "${PWD}\app_data:/app_data" ghcr.io/presenton/presenton:latest
 ```
 
-#### 2. Open Presenton
-Open http://localhost:5000 on browser of your choice to use Presenton.
+#### 2. Open Darbot Presento
+Open http://localhost:5000 on browser of your choice to use Darbot Presento.
 
-> **Note: You can replace 5000 with any other port number of your choice to run Presenton on a different port number.**
+> **Note: You can replace 5000 with any other port number of your choice to run Darbot Presento on a different port number.**
 
 ## Deployment Configurations
 
@@ -117,42 +117,56 @@ You can disable anonymous telemetry using the following environment variable:
 
 ### Using OpenAI
 ```bash
-docker run -it --name presenton -p 5000:80 -e LLM="openai" -e OPENAI_API_KEY="******" -e IMAGE_PROVIDER="dall-e-3" -e CAN_CHANGE_KEYS="false" -v "./app_data:/app_data" ghcr.io/presenton/presenton:latest
+docker run -it --name darbot-presento -p 5000:80 -e LLM="openai" -e OPENAI_API_KEY="******" -e IMAGE_PROVIDER="dall-e-3" -e CAN_CHANGE_KEYS="false" -v "./app_data:/app_data" ghcr.io/presenton/presenton:latest
 ```
 
 ### Using Google
 ```bash
-docker run -it --name presenton -p 5000:80 -e LLM="google" -e GOOGLE_API_KEY="******" -e IMAGE_PROVIDER="gemini_flash" -e CAN_CHANGE_KEYS="false" -v "./app_data:/app_data" ghcr.io/presenton/presenton:latest
+docker run -it --name darbot-presento -p 5000:80 -e LLM="google" -e GOOGLE_API_KEY="******" -e IMAGE_PROVIDER="gemini_flash" -e CAN_CHANGE_KEYS="false" -v "./app_data:/app_data" ghcr.io/presenton/presenton:latest
 ```
 
 ### Using Ollama
 ```bash
-docker run -it --name presenton -p 5000:80 -e LLM="ollama" -e OLLAMA_MODEL="llama3.2:3b" -e IMAGE_PROVIDER="pexels" -e PEXELS_API_KEY="*******" -e CAN_CHANGE_KEYS="false" -v "./app_data:/app_data" ghcr.io/presenton/presenton:latest
+docker run -it --name darbot-presento -p 5000:80 -e LLM="ollama" -e OLLAMA_MODEL="llama3.2:3b" -e IMAGE_PROVIDER="pexels" -e PEXELS_API_KEY="*******" -e CAN_CHANGE_KEYS="false" -v "./app_data:/app_data" ghcr.io/presenton/presenton:latest
 ```
 
 ### Using Anthropic
 ```bash
-docker run -it --name presenton -p 5000:80 -e LLM="anthropic" -e ANTHROPIC_API_KEY="******" -e IMAGE_PROVIDER="pexels" -e PEXELS_API_KEY="******" -e CAN_CHANGE_KEYS="false" -v "./app_data:/app_data" ghcr.io/presenton/presenton:latest
+docker run -it --name darbot-presento -p 5000:80 -e LLM="anthropic" -e ANTHROPIC_API_KEY="******" -e IMAGE_PROVIDER="pexels" -e PEXELS_API_KEY="******" -e CAN_CHANGE_KEYS="false" -v "./app_data:/app_data" ghcr.io/presenton/presenton:latest
 ```
 
 ### Using OpenAI Compatible API
 ```bash
-docker run -it -p 5000:80 -e CAN_CHANGE_KEYS="false"  -e LLM="custom" -e CUSTOM_LLM_URL="http://*****" -e CUSTOM_LLM_API_KEY="*****" -e CUSTOM_MODEL="llama3.2:3b" -e IMAGE_PROVIDER="pexels" -e  PEXELS_API_KEY="********" -v "./app_data:/app_data" ghcr.io/presenton/presenton:latest
+docker run -it --name darbot-presento -p 5000:80 -e CAN_CHANGE_KEYS="false"  -e LLM="custom" -e CUSTOM_LLM_URL="http://*****" -e CUSTOM_LLM_API_KEY="*****" -e CUSTOM_MODEL="llama3.2:3b" -e IMAGE_PROVIDER="pexels" -e  PEXELS_API_KEY="********" -v "./app_data:/app_data" ghcr.io/presenton/presenton:latest
 ```
 
-#### Running Presenton with GPU Support
+#### Running Darbot Presento with GPU Support
 
 To use GPU acceleration with Ollama models, you need to install and configure the NVIDIA Container Toolkit. This allows Docker containers to access your NVIDIA GPU.
 
-Once the NVIDIA Container Toolkit is installed and configured, you can run Presenton with GPU support by adding the `--gpus=all` flag:
+Once the NVIDIA Container Toolkit is installed and configured, you can run Darbot Presento with GPU support by adding the `--gpus=all` flag:
 
 ```bash
-docker run -it --name presenton --gpus=all -p 5000:80 -e LLM="ollama" -e OLLAMA_MODEL="llama3.2:3b" -e IMAGE_PROVIDER="pexels" -e PEXELS_API_KEY="*******" -e CAN_CHANGE_KEYS="false" -v "./app_data:/app_data" ghcr.io/presenton/presenton:latest
+docker run -it --name darbot-presento --gpus=all -p 5000:80 -e LLM="ollama" -e OLLAMA_MODEL="llama3.2:3b" -e IMAGE_PROVIDER="pexels" -e PEXELS_API_KEY="*******" -e CAN_CHANGE_KEYS="false" -v "./app_data:/app_data" ghcr.io/presenton/presenton:latest
 ```
 
 > **Note:** GPU acceleration significantly improves the performance of Ollama models, especially for larger models. Make sure you have sufficient GPU memory for your chosen model.
 
-## Generate Presentation over API
+## MCP (Model Context Protocol) Servers
+
+Darbot Presento includes two MCP server implementations for integration with AI assistants like Claude Desktop:
+
+### Python MCP Server
+- **Location**: `servers/fastapi/mcp_server.py`
+- **Features**: Full API integration via OpenAPI specification
+- **Usage**: Automatically started with the main application on port 8001
+
+### Node.js MCP Server  
+- **Location**: `mcp-server.js`
+- **Features**: Lightweight standalone server for Claude Desktop integration
+- **Setup**: See [MCP_README.md](MCP_README.md) for configuration instructions
+
+Both servers provide the same core functionality for creating and managing presentations through natural language.
 
 ### Generate Presentation
 
